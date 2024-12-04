@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - Wafaa'</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Raleway:wght@300;400&display=swap');
+        
+        /* General Styles */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Raleway', sans-serif;
+            background-color: #f0f8ff;
+            color: #2c3e50;
+        }
+        header {
+            background: linear-gradient(135deg, #91cfff, #b3e5fc);
+            color: white;
+            padding: 50px 20px;
+            text-align: center;
+            border-bottom-left-radius: 50px;
+            border-bottom-right-radius: 50px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        header h1 {
+            font-family: 'Pacifico', cursive;
+            font-size: 3.5em;
+            margin: 0;
+        }
+        header nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 20px 0 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        header nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 10px 15px;
+            border-radius: 5px;
+            background: rgba(255, 255, 255, 0.1);
+            transition: background 0.3s;
+        }
+        header nav ul li a.active {
+            background: white;
+            color: #91cfff;
+        }
+        header nav ul li a:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+        .container {
+            max-width: 1000px;
+            margin: 30px auto;
+            background: #ffffff;
+            border-radius: 20px;
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+        h2 {
+            color: #91cfff;
+            border-bottom: 2px solid #b3e5fc;
+            padding-bottom: 5px;
+            margin-bottom: 15px;
+            font-family: 'Pacifico', cursive;
+        }
+        .gallery {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .gallery-item {
+            position: relative;
+            width: 300px;
+            overflow: hidden;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s;
+            cursor: pointer;
+        }
+        .gallery-item:hover {
+            transform: scale(1.05);
+        }
+        .gallery-item img,
+        .gallery-item video {
+            display: block;
+            width: 100%;
+            border-radius: 15px;
+        }
+        .caption {
+            text-align: center;
+            margin-top: 10px;
+            color: #91cfff;
+            font-weight: bold;
+        }
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            padding: 10px 0;
+            background-color: #d8f1ff;
+            color: #2c3e50;
+            font-size: 0.9em;
+            border-top-left-radius: 50px;
+            border-top-right-radius: 50px;
+        }
+
+        /* Lightbox Styles */
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+        .lightbox img,
+        .lightbox video {
+            max-width: 90%;
+            max-height: 90%;
+            border-radius: 10px;
+        }
+        .lightbox:target {
+            display: flex;
+        }
+        .lightbox-close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            color: white;
+            font-size: 30px;
+            text-decoration: none;
+        }
+        @media (max-width: 768px) {
+            .gallery-item {
+                width: 100%;
+            }
+            header h1 {
+                font-size: 2.5em;
+            }
+            header nav ul {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>🎨 Gallery</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="biodata.html">Biodata</a></li>
+                <li><a href="experience.html">Experience</a></li>
+                <li><a href="education.html">Education</a></li>
+                <li><a href="family.html">Family</a></li>
+                <li><a href="gallery.html" class="active">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <main>
+            <h2>My Gallery</h2>
+            <div class="gallery">
+                <div class="gallery-item">
+                    <a href="#lightbox1"><img src="image1.jpg" alt="Umi and Ayah <3"></a>
+                    <p class="caption">Umi and Ayah <3</p>
+                </div>
+                <div class="gallery-item">
+                    <a href="#lightbox2"><img src="image2.jpg" alt="Vacation"></a>
+                    <p class="caption">Vacation</p>
+                </div>
+                <div class="gallery-item">
+                    <a href="#lightbox3"><img src="image3.jpg" alt="Nature"></a>
+                    <p class="caption">Nature</p>
+                </div>
+                <div class="gallery-item">
+                    <a href="#lightbox4"><img src="image4.jpg" alt="Trip :3"></a>
+                    <p class="caption">Trip :3</p>
+                </div>
+                <div class="gallery-item">
+                    <a href="#lightbox5">
+                        <video src="video.mp4" controls muted></video>
+                    </a>
+                    <p class="caption">:D</p>
+                </div>
+                <div class="gallery-item">
+                    <a href="#lightbox6"><img src="image5.jpg" alt="hiking"></a>
+                    <p class="caption">hiking</p>
+                </div>
+            </div>
+
+            <!-- Lightbox for images -->
+            <div id="lightbox1" class="lightbox">
+                <a href="#" class="lightbox-close">&times;</a>
+                <img src="image1.jpg" alt="Umi and Ayah <3">
+            </div>
+            <div id="lightbox2" class="lightbox">
+                <a href="#" class="lightbox-close">&times;</a>
+                <img src="image2.jpg" alt="Vacation">
+            </div>
+            <div id="lightbox3" class="lightbox">
+                <a href="#" class="lightbox-close">&times;</a>
+                <img src="image3.jpg" alt="Nature">
+            </div>
+            <div id="lightbox4" class="lightbox">
+                <a href="#" class="lightbox-close">&times;</a>
+                <img src="image4.jpg" alt="Trip :3">
+            </div>
+            <div id="lightbox5" class="lightbox">
+                <a href="#" class="lightbox-close">&times;</a>
+                <video src="video.mp4" controls autoplay></video>
+            </div>
+            <div id="lightbox6" class="lightbox">
+                <a href="#" class="lightbox-close">&times;</a>
+                <img src="image5.jpg" alt="hiking">
+            </div>
+
+        </main>
+    </div>
+
+    <footer>
+        <p>© 2024 wafaa' termizi. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

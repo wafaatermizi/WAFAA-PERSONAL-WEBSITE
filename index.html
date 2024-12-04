@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore the personal website of Wafaa', showcasing my journey, education, experiences, and aspirations.">
+    <meta name="keywords" content="Wafaa', personal website, biodata, education, experience, gallery, contact">
+    <meta name="author" content="Wafaa' Termizi">
+    <title>Home - Wafaa'</title>
+    <style>
+        /* General Styles */
+        @import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Raleway:wght@300;400&display=swap');
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Raleway', sans-serif, Arial, sans-serif;
+            background-color: #f0f8ff;
+            color: #2c3e50;
+        }
+
+        header {
+            background: linear-gradient(135deg, #91cfff, #b3e5fc);
+            color: white;
+            padding: 50px 20px;
+            text-align: center;
+            border-bottom-left-radius: 50px;
+            border-bottom-right-radius: 50px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            font-family: 'Pacifico', cursive;
+            font-size: 3.5em;
+            margin: 0;
+        }
+
+        header nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 20px 0 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        header nav ul li {
+            display: inline;
+        }
+
+        header nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 10px 15px;
+            border-radius: 5px;
+            background: rgba(255, 255, 255, 0.1);
+            transition: all 0.3s;
+        }
+
+        header nav ul li a.active {
+            background: white;
+            color: #91cfff;
+        }
+
+        header nav ul li a:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 30px auto;
+            background: #ffffff;
+            border-radius: 20px;
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+        }
+
+        .profile-pic {
+            display: block;
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin: -75px auto 20px;
+            border: 5px solid #f0f8ff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #91cfff;
+            border-bottom: 2px solid #b3e5fc;
+            padding-bottom: 5px;
+            margin-bottom: 15px;
+            font-family: 'Pacifico', cursive;
+        }
+
+        p {
+            line-height: 1.6;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            padding: 10px 0;
+            background-color: #d8f1ff;
+            color: #2c3e50;
+            font-size: 0.9em;
+            border-top-left-radius: 50px;
+            border-top-right-radius: 50px;
+        }
+
+        footer a {
+            color: #91cfff;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.5em;
+            }
+
+            header nav ul {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .profile-pic {
+                width: 120px;
+                height: 120px;
+            }
+
+            .container {
+                padding: 15px;
+            }
+
+            footer {
+                font-size: 0.8em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <audio autoplay loop>
+        <source src="background-music1.mp3" type="audio/mpeg">
+    </audio>
+    
+    <header>
+        <h1>Welcome to My Personal Website</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="biodata.html">Biodata</a></li>
+                <li><a href="experience.html">Experience</a></li>
+                <li><a href="education.html">Education</a></li>
+                <li><a href="family.html">Family</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <!-- Profile Picture -->
+        <img src="profile.jpg" alt="Your Profile Picture" class="profile-pic" loading="lazy">
+        
+        <!-- About Section -->
+        <section>
+            <h2>About Me</h2>
+            <p>
+                Welcome! I'm Wafaa', and this is where you can explore my journey, experiences, and aspirations.
+            </p>
+        </section>
+    </div>
+    <footer>
+        <p>© 2024 Wafaa' Termizi. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
